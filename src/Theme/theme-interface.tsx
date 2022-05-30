@@ -6,6 +6,7 @@ export default interface Theme {
   };
   primary: {
     default: string;
+    dark: string;
   };
   secondary: {
     default: string;

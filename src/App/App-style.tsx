@@ -1,14 +1,22 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
+  font-size: 100px;
+  text-align: left;
+  color: ${(props) => props.theme.text.default};
+
+  span:first-child {
+    color: ${(props) => props.theme.primary.default};
+  }
+
+  span:last-child {
+    color: ${(props) => props.theme.secondary.default};
+  }
 `;
 
-export const Wrapper = styled.section`
-  padding: 4em;
-  // background: ${(props) => props.theme.bg.default};
+export const TitleContainer = styled.div`
+  width: 60%;
+  margin-left: 5%;
 `;
 
 export const Button = styled.button`
@@ -37,8 +45,14 @@ export const Paragraph = styled.p`
 
 export const Page = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   // background: blue;
   background: ${(props) => props.theme.bg.default};
   box-sizing: border-box;
+`;
+
+export const SubHeader = styled.h2`
+  font-size: 30px;
+  color: ${(props) => props.theme.text.default};
+  font-weight: ${(props) => props.theme.fontWeight.medium};
 `;

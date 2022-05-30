@@ -8,9 +8,10 @@ export const light: Theme = {
   },
   primary: {
     default: "#B3005C",
+    dark: "#661F43"
   },
   secondary: {
-    default: "#ffffff",
+    default: "#3F88C5",
   },
   text: {
     default: "#24292E",
