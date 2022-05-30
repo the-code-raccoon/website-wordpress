@@ -1,6 +1,8 @@
-import { Container, Links } from "./Header-style";
+import { Container, Links, Toggle } from "./Header-style";
 
-export default function Header() {
+export default function Header(props: any) {
+  const { toggleThemeMode } = props;
+
   return (
     <div>
       <Container>
@@ -9,6 +11,7 @@ export default function Header() {
           <div>Work</div>
           <div>About</div>
           <div>Contact</div>
+          <Toggle toggleThemeMode={toggleThemeMode} />
         </Links>
       </Container>
     </div>

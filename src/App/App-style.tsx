@@ -35,14 +35,9 @@ export const Paragraph = styled.p`
   margin-bottom: 20px;
 `;
 
-export const Toggle = (props: any) => {
-  const { toggleThemeMode } = props;
-  return <Button onClick={toggleThemeMode}>Switch Theme</Button>;
-};
-
 export const Page = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   // background: blue;
   background: ${(props) => props.theme.bg.default};
   box-sizing: border-box;
