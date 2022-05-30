@@ -8,7 +8,7 @@ export const Title = styled.h1`
 
 export const Wrapper = styled.section`
   padding: 4em;
-  background: ${(props) => props.theme.bg.default};
+  // background: ${(props) => props.theme.bg.default};
 `;
 
 export const Button = styled.button`
@@ -39,3 +39,11 @@ export const Toggle = (props: any) => {
   const { toggleThemeMode } = props;
   return <Button onClick={toggleThemeMode}>Switch Theme</Button>;
 };
+
+export const Page = styled.div`
+  width: 100vw;
+  height: 100vh;
+  // background: blue;
+  background: ${(props) => props.theme.bg.default};
+  box-sizing: border-box;
+`;
