@@ -26,6 +26,3 @@ export default function Theme(props: any) {
     </ThemeProvider>
   );
 }
-// console.log(theme, children);
-// const { mode, children } = props;
-// <ThemeProvider theme={theme}>{props.children}</ThemeProvider>

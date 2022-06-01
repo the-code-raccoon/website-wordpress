@@ -33,7 +33,9 @@ export default function App() {
           </TitleContainer>
         </Section>
         <Section>
-          <SubHeader>Featured Works</SubHeader>
+          <TitleContainer>
+            <SubHeader>Featured Works</SubHeader>
+          </TitleContainer>
           <FeaturedWork />
         </Section>
       </Page>
