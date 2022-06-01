@@ -15,8 +15,7 @@ export const Title = styled.h1`
 `;
 
 export const TitleContainer = styled.div`
-  width: 60%;
-  margin-left: 5%;
+  width: 80%;
 `;
 
 export const Button = styled.button`

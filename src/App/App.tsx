@@ -1,11 +1,8 @@
-import {
-  Section,
-  Title,
-  TitleContainer,
-  Button,
-  Page,
-  SubHeader,
-} from "./App-style";
+import { Title, TitleContainer, Page, SubHeader, Section } from "./App-style";
+
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 import Header from "./Header";
 import FeaturedWork from "./FeaturedWork";
@@ -21,23 +18,29 @@ export default function App() {
     <Theme themeMode={themeMode}>
       <Page>
         <Header toggleThemeMode={toggleThemeMode} />
-        <Section>
-          <TitleContainer>
-            <Title>
-              Hi, I'm <span>Francesca Ho</span> and I'm a
-              <span> Full-Stack Web Developer</span>
-            </Title>
-            <SubHeader>
-              I'm currently looking for work and open for projects!
-            </SubHeader>
-          </TitleContainer>
-        </Section>
-        <Section>
-          <TitleContainer>
+        <Container fluid="lg">
+          <Row>
+            <Col className="my-5">
+              <Title>
+                Hi, I'm <span>Francesca Ho</span> and I'm a
+                <span> Full-Stack Web Developer</span>
+              </Title>
+            </Col>
+          </Row>
+          <Row>
+            <Col className="mt-5">
+              <SubHeader>
+                I'm currently looking for work and open for projects!
+              </SubHeader>
+            </Col>
+          </Row>
+          <Row>
             <SubHeader>Featured Works</SubHeader>
-          </TitleContainer>
-          <FeaturedWork />
-        </Section>
+          </Row>
+          <Row>
+            <FeaturedWork />
+          </Row>
+        </Container>
       </Page>
     </Theme>
   );
