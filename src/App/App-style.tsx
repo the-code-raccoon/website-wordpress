@@ -31,9 +31,7 @@ export const Button = styled.button`
 `;
 
 export const Section = styled.main`
-  display: flex;
-  flex-direction: column;
-  background: #fff;
+  border: 2px solid orange;
 `;
 
 export const Paragraph = styled.p`
@@ -45,7 +43,8 @@ export const Paragraph = styled.p`
 
 export const Page = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   // background: blue;
   background: ${(props) => props.theme.bg.default};
   box-sizing: border-box;
