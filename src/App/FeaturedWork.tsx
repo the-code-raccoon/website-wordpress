@@ -1,10 +1,8 @@
 import {
-  Container as ContainerCustom,
   WorkContainer,
   WorkLogo,
 } from "./FeaturedWork-style";
 
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -12,7 +10,7 @@ export default function FeaturedWork() {
   const works = [
     {
       name: "Charcuterie",
-      link: "https://raw.githubusercontent.com/the-code-raccoon/website/main/assets/charcuterie-logo.png",
+      link: "https://raw.githubusercontent.com/the-code-raccoon/website/ebca3ba315deb25ed16b66ab95e19bb07f4b6ac2/assets/Charcuterie.svg",
       bgcolor: "#ffffff",
     },
     {
@@ -21,24 +19,14 @@ export default function FeaturedWork() {
       bgcolor: "#DA4167",
     },
     {
-      name: "Charcuterie",
-      link: "https://raw.githubusercontent.com/the-code-raccoon/website/8cf3d05e2149bc666d15f36bb20c4b07a829c538/assets/Charcuterie.svg",
-      bgcolor: "#ffffff",
+      name: "GOTHREAU",
+      link: "https://raw.githubusercontent.com/the-code-raccoon/website/ebca3ba315deb25ed16b66ab95e19bb07f4b6ac2/assets/GOTHREAU.svg",
+      bgcolor: "#674EA7",
     },
     {
-      name: "Charcuterie",
-      link: "https://raw.githubusercontent.com/the-code-raccoon/website/main/assets/charcuterie-logo.png",
-      bgcolor: "#ffffff",
-    },
-    {
-      name: "Charcuterie",
-      link: "https://raw.githubusercontent.com/the-code-raccoon/website/main/assets/charcuterie-logo.png",
-      bgcolor: "#ffffff",
-    },
-    {
-      name: "Charcuterie",
-      link: "https://raw.githubusercontent.com/the-code-raccoon/website/main/assets/charcuterie-logo.png",
-      bgcolor: "#ffffff",
+      name: "Interview Scheduler",
+      link: "https://raw.githubusercontent.com/the-code-raccoon/scheduler/main/public/images/logo.png",
+      bgcolor: "#222f3e",
     },
   ];
 
