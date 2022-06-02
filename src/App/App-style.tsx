@@ -31,6 +31,7 @@ export const Button = styled.button`
 
 export const Section = styled.main`
   border: 2px solid orange;
+  height: 100vh
 `;
 
 export const Paragraph = styled.p`
