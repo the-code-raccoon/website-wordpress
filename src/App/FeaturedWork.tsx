@@ -1,12 +1,9 @@
-import {
-  WorkContainer,
-  WorkLogo,
-} from "./FeaturedWork-style";
+import { WorkContainer, WorkLogo } from "./FeaturedWork-style";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-export default function FeaturedWork() {
+export default function FeaturedWork(props: any) {
   const works = [
     {
       name: "Charcuterie",
@@ -31,16 +28,18 @@ export default function FeaturedWork() {
   ];
 
   return (
-    <Row className="justify-content-center">
-      {works.map((work) => {
-        return (
-          <Col md="auto" key={work.name}>
-            <WorkContainer bgcolor={work.bgcolor}>
-              <WorkLogo src={work.link} alt={work.name} />
-            </WorkContainer>
-          </Col>
-        );
-      })}
-    </Row>
+    <div id="featured-works">
+      <Row className="justify-content-center">
+        {works.map((work) => {
+          return (
+            <Col md="auto" key={work.name}>
+              <WorkContainer bgcolor={work.bgcolor}>
+                <WorkLogo src={work.link} alt={work.name} />
+              </WorkContainer>
+            </Col>
+          );
+        })}
+      </Row>
+    </div>
   );
 }

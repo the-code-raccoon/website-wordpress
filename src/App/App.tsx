@@ -6,8 +6,11 @@ import Row from "react-bootstrap/Row";
 
 import Header from "./Header";
 import FeaturedWork from "./FeaturedWork";
+import Footer from "./Footer"
 import Theme from "./Theme";
 import useDarkMode from "./useDarkMode";
+
+import { Element } from "react-scroll";
 
 import "./App.css";
 
@@ -41,10 +44,13 @@ export default function App() {
               <SubHeader>Featured Works</SubHeader>
             </Row>
             <Row>
-              <FeaturedWork />
+              <Element name="featured-works">
+                <FeaturedWork />
+              </Element>
             </Row>
           </Section>
         </Container>
+        <Footer />
       </Page>
     </Theme>
   );

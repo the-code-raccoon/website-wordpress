@@ -1,23 +1,34 @@
-import { Toggle, Text } from "./Header-style";
+import { Toggle, Text, Brand } from "./Header-style";
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 
+import { animateScroll as scroll, scroller } from "react-scroll";
+
 export default function Header(props: any) {
   const { toggleThemeMode } = props;
 
   return (
-    <Navbar expand="sm">
+    <Navbar expand="sm" fixed="top">
       <Container fluid>
-        <Navbar.Brand href="#home" className="align-items-center">
-          <Text>F. Ho</Text>
-        </Navbar.Brand>
+        <Nav.Link onClick={() => scroll.scrollToTop()}>
+          <Brand>F. Ho</Brand>
+        </Nav.Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-center">
             <Toggle className="me-auto" toggleThemeMode={toggleThemeMode} />
-            <Nav.Link href="#work">
+            <Nav.Link
+              onClick={() => {
+                scroller.scrollTo("featured-works", {
+                  duration: 800,
+                  delay: 0,
+                  smooth: "easeInOutQuart",
+                  offset: -150,
+                });
+              }}
+            >
               <Text>Work</Text>
             </Nav.Link>
             <Nav.Link href="#about">

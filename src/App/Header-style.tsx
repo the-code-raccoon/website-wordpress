@@ -25,3 +25,7 @@ export const Text = styled.span`
   font-weight: ${(props) => props.theme.fontWeight.semibold};
   padding: 1.3em;
 `;
+
+export const Brand = styled(Text)`
+  font-size: 2.3em;
+`;
