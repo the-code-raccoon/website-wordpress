@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
+  margin-top: 10vh;
   font-size: 100px;
   text-align: left;
   color: ${(props) => props.theme.text.default};

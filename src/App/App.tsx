@@ -1,4 +1,4 @@
-import { Title, TitleContainer, Page, SubHeader, Section } from "./App-style";
+import { Title, Page, SubHeader, Section } from "./App-style";
 
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
