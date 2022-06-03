@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 
 import Header from "./Header";
 import FeaturedWork from "./FeaturedWork";
-import Footer from "./Footer"
+import Footer from "./Footer";
 import Theme from "./Theme";
 import useDarkMode from "./useDarkMode";
 
@@ -49,6 +49,20 @@ export default function App() {
               </Element>
             </Row>
           </Section>
+          <Section>
+            <Row>
+              <SubHeader>About</SubHeader>
+            </Row>
+            <Row>
+              <Element name="about">fdsfdsfksd</Element>
+            </Row>
+          </Section>
+          <Row>
+            <SubHeader>Contact Me!</SubHeader>
+          </Row>
+          <Row>
+            <Element name="contact">fdsfdsfksd</Element>
+          </Row>
         </Container>
         <Footer />
       </Page>

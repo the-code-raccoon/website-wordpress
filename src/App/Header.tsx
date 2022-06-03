@@ -31,10 +31,26 @@ export default function Header(props: any) {
             >
               <Text>Work</Text>
             </Nav.Link>
-            <Nav.Link href="#about">
+            <Nav.Link
+              onClick={() => {
+                scroller.scrollTo("about", {
+                  duration: 800,
+                  delay: 0,
+                  smooth: "easeInOutQuart",
+                  offset: -150,
+                });
+              }}
+            >
               <Text>About</Text>
             </Nav.Link>
-            <Nav.Link href="#contact">
+            <Nav.Link onClick={() => {
+                scroller.scrollTo("contact", {
+                  duration: 800,
+                  delay: 0,
+                  smooth: "easeInOutQuart",
+                  offset: -150,
+                });
+              }}>
               <Text>Contact</Text>
             </Nav.Link>
           </Nav>
