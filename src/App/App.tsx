@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 
 import Header from "./Header";
 import FeaturedWork from "./FeaturedWork";
+import Contact from "./Contact";
 import Footer from "./Footer";
 import Theme from "./Theme";
 import useDarkMode from "./useDarkMode";
@@ -61,7 +62,9 @@ export default function App() {
             <SubHeader>Contact Me!</SubHeader>
           </Row>
           <Row>
-            <Element name="contact">fdsfdsfksd</Element>
+            <Element name="contact">
+              <Contact />
+            </Element>
           </Row>
         </Container>
         <Footer />
