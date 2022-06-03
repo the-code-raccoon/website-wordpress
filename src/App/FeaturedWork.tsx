@@ -28,18 +28,16 @@ export default function FeaturedWork(props: any) {
   ];
 
   return (
-    <div id="featured-works">
-      <Row className="justify-content-center">
-        {works.map((work) => {
-          return (
-            <Col md="auto" key={work.name}>
-              <WorkContainer bgcolor={work.bgcolor}>
-                <WorkLogo src={work.link} alt={work.name} />
-              </WorkContainer>
-            </Col>
-          );
-        })}
-      </Row>
-    </div>
+    <Row className="justify-content-center mt-5">
+      {works.map((work) => {
+        return (
+          <Col md="auto" key={work.name}>
+            <WorkContainer bgcolor={work.bgcolor}>
+              <WorkLogo src={work.link} alt={work.name} />
+            </WorkContainer>
+          </Col>
+        );
+      })}
+    </Row>
   );
 }
