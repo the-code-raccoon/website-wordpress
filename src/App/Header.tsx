@@ -13,7 +13,7 @@ export default function Header(props: any) {
   ];
 
   return (
-    <nav className="w-100 flex flex-row items-center justify-between px-4 py-2">
+    <nav className="w-100 flex flex-row items-center justify-between px-4 py-2 absolute">
       <div
         className="flex flex-row text-5xl font-bold text-orange-500 hover:cursor-pointer dark:text-purple-700"
         onClick={() => scroll.scrollToTop()}

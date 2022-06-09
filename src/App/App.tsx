@@ -19,20 +19,24 @@ export default function App() {
 
   return (
     <Theme themeMode={themeMode}>
-      <div className="bg-slate-50 transition ease-in-out dark:bg-zinc-900">
+      <div className="bg-slate-200 transition ease-in-out dark:bg-zinc-900">
         <Header toggleThemeMode={toggleThemeMode} />
-        <div className="h-[100vh]">
-          <h1 id="header" className="text-7xl text-slate-900 dark:text-white">
-            Hi, I'm <span className="text-bleu">Francesca Ho</span> and I'm
-            a
-            <span className="font-pixel text-maroon">
-              {" "} Full-Stack Web Developer
-            </span>
-            <span className="inline-block animate-cursor-blink bg-maroon text-transparent text-6xl">{"|"}</span>
-          </h1>
-          <h1 className="text-3xl text-slate-900 dark:text-white">
-            I'm currently looking for work and open for projects!
-          </h1>
+        <div className="h-[100vh] flex justify-center items-center">
+          <div className="max-w-[1000px]">
+            <h1 id="header" className="text-7xl text-slate-900 dark:text-white">
+              Hi, I'm <span className="text-bleu">Francesca Ho</span> and I'm a
+              <span className="font-pixel text-maroon">
+                {" "}
+                Full-Stack Web Developer
+              </span>
+              <span className="inline-block animate-cursor-blink bg-maroon text-6xl text-transparent">
+                {"|"}
+              </span>
+            </h1>
+            <h1 className="text-3xl text-slate-900 dark:text-white">
+              I'm currently looking for work and open for projects!
+            </h1>
+          </div>
         </div>
         <Section>
           <Row>
