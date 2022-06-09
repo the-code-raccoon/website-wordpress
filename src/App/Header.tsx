@@ -1,17 +1,14 @@
-import { Toggle, Text, Brand } from "./Header-style";
-
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
-
 import { animateScroll as scroll, scroller } from "react-scroll";
 
 export default function Header(props: any) {
   const { toggleThemeMode } = props;
 
   return (
-    <header className="text-white">
-      <div className="text-orange-500 font-bold text-8xl dark:text-white">
+    <header className="fixed flex flex-row text-white">
+      <div
+        className="text-8xl font-bold text-orange-500 hover:cursor-pointer dark:text-white"
+        onClick={() => scroll.scrollToTop()}
+      >
         F. Ho
       </div>
       <div>
@@ -23,7 +20,7 @@ export default function Header(props: any) {
         </div>
       </div>
       <button
-        className="bg-white text-black border border-black p-3"
+        className="border border-black bg-white p-3 text-black"
         onClick={() => {
           const html = document.querySelector("html")!;
           html.classList.contains("dark")
