@@ -1,6 +1,6 @@
 import { Title, Page, SubHeader, Section } from "./App-style";
 
-import Container from "react-bootstrap/Container";
+import div from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
@@ -19,10 +19,10 @@ export default function App() {
   const [themeMode, toggleThemeMode] = useDarkMode();
 
   return (
-    <Theme themeMode={themeMode}>
-      <Page>
-        <Header toggleThemeMode={toggleThemeMode} />
-        <Container fluid="lg">
+    <>
+      <Header toggleThemeMode={toggleThemeMode} />
+      <Theme themeMode={themeMode}>
+        <div className="dark:bg-slate-800">
           <Section>
             <Row className="justify-content-center">
               <Col className="my-5">
@@ -66,9 +66,9 @@ export default function App() {
               <Contact />
             </Element>
           </Row>
-        </Container>
+        </div>
         <Footer />
-      </Page>
-    </Theme>
+      </Theme>
+    </>
   );
 }
