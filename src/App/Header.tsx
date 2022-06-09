@@ -13,7 +13,7 @@ export default function Header(props: any) {
   ];
 
   return (
-    <nav className="w-100 items-center flex flex-row justify-between px-4 py-2">
+    <nav className="w-100 flex flex-row items-center justify-between px-4 py-2">
       <div
         className="flex flex-row text-5xl font-bold text-orange-500 hover:cursor-pointer dark:text-purple-700"
         onClick={() => scroll.scrollToTop()}
@@ -46,8 +46,8 @@ export default function Header(props: any) {
           );
         })}
       </div>
-      <button
-        className="border border-black bg-white px-3 py-1 text-xl text-black"
+      <div
+        className="flex h-7 w-14 cursor-pointer items-center rounded-full border border-black bg-gray-300 p-1"
         onClick={() => {
           const html = document.querySelector("html")!;
 
@@ -60,9 +60,13 @@ export default function Header(props: any) {
           }
         }}
       >
-        {mode === "LIGHT" && "Switch to Dark"}
-        {mode === "DARK" && "Switch to Light"}
-      </button>
+        <div
+          className={
+            "h-5 w-5 rounded-full bg-purple-900 shadow-md transition ease-in-out " +
+            (mode === "DARK" ? "" : " translate-x-6 transform")
+          }
+        ></div>
+      </div>
     </nav>
   );
 }
