@@ -11,7 +11,7 @@ export default function Header(props: any) {
 
   return (
     <header className="text-white">
-      <div className="text-orange-200 bold">
+      <div className="text-orange-500 font-bold text-8xl dark:text-white">
         F. Ho
       </div>
       <div>
@@ -22,6 +22,17 @@ export default function Header(props: any) {
           <div>one</div>
         </div>
       </div>
+      <button
+        className="bg-white text-black border border-black p-3"
+        onClick={() => {
+          const html = document.querySelector("html")!;
+          html.classList.contains("dark")
+            ? html.classList.remove("dark")
+            : html.classList.add("dark");
+        }}
+      >
+        Click
+      </button>
     </header>
   );
   // return (
