@@ -13,33 +13,38 @@ export default function Header(props: any) {
   ];
 
   return (
-    <header className="w-100 fixed flex flex-row justify-between text-white">
+    <nav className="w-100 items-center flex flex-row justify-between px-4 py-2">
       <div
-        className="text-5xl font-bold text-orange-500 hover:cursor-pointer dark:text-white"
+        className="flex flex-row text-5xl font-bold text-orange-500 hover:cursor-pointer dark:text-purple-700"
         onClick={() => scroll.scrollToTop()}
       >
-        F. Ho
+        <h1>F. Ho</h1>
+        {/* <button
+          className="block cursor-pointer rounded border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none text-white outline-none focus:outline-none lg:hidden"
+          type="button"
+        >
+          BUTTON
+        </button> */}
       </div>
-      <div>
-        <ul className="flex flex-row">
-          {navlinks.map((link) => {
-            return (
-              <li
-                className="mx-3 text-3xl"
-                onClick={() => {
-                  scroller.scrollTo(link.element, {
-                    duration: 800,
-                    delay: 0,
-                    smooth: "easeInOutQuart",
-                    offset: -150,
-                  });
-                }}
-              >
-                {link.text}
-              </li>
-            );
-          })}
-        </ul>
+      <div className="align-center flex flex-row flex-col justify-center text-purple-700 dark:text-white">
+        {navlinks.map((link) => {
+          return (
+            <div
+              key={link.text}
+              className="mx-3 text-3xl"
+              onClick={() => {
+                scroller.scrollTo(link.element, {
+                  duration: 800,
+                  delay: 0,
+                  smooth: "easeInOutQuart",
+                  offset: -150,
+                });
+              }}
+            >
+              {link.text}
+            </div>
+          );
+        })}
       </div>
       <button
         className="border border-black bg-white px-3 py-1 text-xl text-black"
@@ -58,6 +63,6 @@ export default function Header(props: any) {
         {mode === "LIGHT" && "Switch to Dark"}
         {mode === "DARK" && "Switch to Light"}
       </button>
-    </header>
+    </nav>
   );
 }

@@ -1,6 +1,5 @@
-import { Title, Page, SubHeader, Section } from "./App-style";
+import { SubHeader, Section } from "./App-style";
 
-import div from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
@@ -20,16 +19,16 @@ export default function App() {
 
   return (
     <>
-      <Header toggleThemeMode={toggleThemeMode} />
       <Theme themeMode={themeMode}>
-        <div className="dark:bg-slate-800">
+        <div className="bg-slate-50 dark:bg-zinc-900">
+          <Header toggleThemeMode={toggleThemeMode} />
           <Section>
             <Row className="justify-content-center">
               <Col className="my-5">
-                <Title>
+                <h1 className="text-orange-300 dark:text-white">
                   Hi, I'm <span>Francesca Ho</span> and I'm a
-                  <span> Full-Stack Web Developer</span>
-                </Title>
+                  <span className="font-pixel"> Full-Stack Web Developer</span>
+                </h1>
               </Col>
             </Row>
             <Row>
