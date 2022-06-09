@@ -20,25 +20,21 @@ export default function App() {
   return (
     <>
       <Theme themeMode={themeMode}>
-        <div className="bg-slate-50 dark:bg-zinc-900">
+        <div className="bg-slate-50 transition ease-in-out dark:bg-zinc-900">
           <Header toggleThemeMode={toggleThemeMode} />
-          <Section>
-            <Row className="justify-content-center">
-              <Col className="my-5">
-                <h1 className="text-orange-300 dark:text-white">
-                  Hi, I'm <span>Francesca Ho</span> and I'm a
-                  <span className="font-pixel"> Full-Stack Web Developer</span>
-                </h1>
-              </Col>
-            </Row>
-            <Row>
-              <Col className="mt-5">
-                <SubHeader>
-                  I'm currently looking for work and open for projects!
-                </SubHeader>
-              </Col>
-            </Row>
-          </Section>
+          <div className="h-[100vh]">
+            <h1 className="text-7xl text-slate-900 dark:text-white">
+              Hi, I'm <span className="text-[#3F88C5]">Francesca Ho</span> and
+              I'm a
+              <span className="font-pixel text-[#B3005C]">
+                {" "}
+                Full-Stack Web Developer
+              </span>
+            </h1>
+            <h1 className="text-3xl text-slate-900 dark:text-white">
+              I'm currently looking for work and open for projects!
+            </h1>
+          </div>
           <Section>
             <Row>
               <SubHeader>Featured Works</SubHeader>

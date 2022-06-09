@@ -31,7 +31,7 @@ export default function Header(props: any) {
           return (
             <div
               key={link.text}
-              className="mx-3 text-3xl"
+              className="mx-3 text-3xl cursor-pointer"
               onClick={() => {
                 scroller.scrollTo(link.element, {
                   duration: 800,
