@@ -70,14 +70,4 @@ export default function Background() {
       />
     </div>
   );
-
-  // return (
-  //   <Parallax
-  //     translateY={["-100px", "200px"]}
-  //     translateX={["-500px", "500px"]}
-  //     speed={5}
-  //   >
-  //     <div className="h-20 w-20 bg-orange-500" />
-  //   </Parallax>
-  // );
 }
