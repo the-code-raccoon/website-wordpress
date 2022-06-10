@@ -1,6 +1,6 @@
 import Header from "./Header";
-import FeaturedWork from "./FeaturedWork";
-import Contact from "./Contact";
+// import FeaturedWork from "./FeaturedWork";
+// import Contact from "./Contact";
 
 import Background from "./Background";
 
@@ -39,11 +39,11 @@ export default function App() {
           </div>
 
           <div className="z-10 w-[100vw]" id="featured-works">
-            <FeaturedWork />
+            {/* <FeaturedWork /> */}
           </div>
 
           <div className="z-10 w-[100vw]" id="contact">
-            <Contact />
+            {/* <Contact /> */}
           </div>
 
           <Background />
