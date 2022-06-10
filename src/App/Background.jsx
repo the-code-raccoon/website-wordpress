@@ -22,7 +22,8 @@ export default function Background() {
   const midExtend = 50 * 10 * -1;
   const closeExtend = 100 * 10 * -1;
 
-  const root = "absolute w-[400vw] h-[100vh] z-0 overflow-x-hidden";
+  const root =
+    "absolute w-[400vw] h-[100vh] z-0 overflow-x-hidden overflow-y-hidden";
   const layer = "absolute bottom-0 h-[100vh] bg-repeat-x";
 
   return (
@@ -38,8 +39,7 @@ export default function Background() {
       /> */}
       <div
         style={{
-          backgroundPositionX: "left",
-          backgroundPositionY: "bottom 200px",
+          backgroundPosition: "bottom 200px left 0",
           backgroundSize: "auto 200px",
           backgroundImage: `url(${imageFar})`,
           left: 0,
@@ -49,8 +49,7 @@ export default function Background() {
       />
       <div
         style={{
-          backgroundPositionX: "left",
-          backgroundPositionY: "bottom 95px",
+          backgroundPosition: "bottom 95px left 0",
           backgroundSize: "auto 250px",
           backgroundImage: `url(${imageMid})`,
           left: midExtend,
@@ -61,8 +60,7 @@ export default function Background() {
       />
       <div
         style={{
-          backgroundPositionX: "left",
-          backgroundPositionY: "bottom",
+          backgroundPosition: "bottom left 0",
           backgroundSize: "auto 300px",
           backgroundImage: `url(${imageClose})`,
           left: closeExtend,
