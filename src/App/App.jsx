@@ -1,11 +1,8 @@
 import Header from "./Header";
 import FeaturedWork from "./FeaturedWork";
 import Contact from "./Contact";
-import Footer from "./Footer";
 
 import Background from "./Background";
-
-import { Element } from "react-scroll";
 
 import { ParallaxProvider } from "react-scroll-parallax";
 
