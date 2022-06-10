@@ -1,16 +1,7 @@
-import { SubHeader, Section } from "./App-style";
-
-import { useRef, useEffect } from "react";
-
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-
 import Header from "./Header";
 import FeaturedWork from "./FeaturedWork";
 import Contact from "./Contact";
 import Footer from "./Footer";
-import Theme from "./Theme";
-import useDarkMode from "./useDarkMode";
 
 import Background from "./Background";
 
@@ -35,7 +26,7 @@ export default function App() {
           <div className="z-10">
             <h1 className="text-7xl text-slate-900 dark:text-white">
               Hi, I'm <span className="text-bleu">Francesca Ho</span> and I'm a
-              <span className="font-pixel text-maroon">
+              <span className="text-maroon">
                 {" "}
                 Full-Stack Web Developer
               </span>

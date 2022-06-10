@@ -22,22 +22,24 @@ export default function Background() {
   const midExtend = 50 * 5 * -1;
   const closeExtend = 100 * 5 * -1;
 
-  const root = "absolute w-[200vw] h-[100vh] z-0";
-  const layer = "absolute top-0 bottom-0 h-[100vh]";
+  const root = "absolute w-[200vw] h-[100vh] z-0 overflow-x-hidden";
+  const layer = "absolute bottom-0 h-[100vh] bg-repeat-x";
 
   return (
     <div className={root} ref={target}>
-      <div
+      {/* <div
         style={{
+          backgroundSize: "50%",
           backgroundImage: `url(${imageBg})`,
           left: 0,
           right: 0,
-          top: 0,
         }}
-        className={layer}
-      />
+        className={layer + " bg-repeat-y"}
+      /> */}
       <div
         style={{
+          backgroundPositionY: "bottom 200px",
+          backgroundSize: "auto 200px",
           backgroundImage: `url(${imageFar})`,
           left: 0,
           right: 0,
@@ -46,6 +48,8 @@ export default function Background() {
       />
       <div
         style={{
+          backgroundPositionY: "bottom 95px",
+          backgroundSize: "auto 250px",
           backgroundImage: `url(${imageMid})`,
           left: midExtend,
           right: midExtend,
@@ -55,6 +59,8 @@ export default function Background() {
       />
       <div
         style={{
+          backgroundPositionY: "bottom",
+          backgroundSize: "auto 300px",
           backgroundImage: `url(${imageClose})`,
           left: closeExtend,
           right: closeExtend,
