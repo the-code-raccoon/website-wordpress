@@ -50,7 +50,7 @@ export default function Skills() {
           return (
             <div key={text} className="w-[20vw] mx-3">
               <h1 className=" dark:text-white">{text}</h1>
-              <div className="flex h-[60vh] flex-wrap justify-evenly items-evenly rounded-md p-3 bg-slate-200/[0.5] shadow">
+              <div className="flex h-[60vh] flex-wrap justify-evenly content-evenly rounded-md p-3 bg-slate-200/[0.5] shadow">
                 {set.map(({ text, link }) => {
                   return (
                     <div
