@@ -11,11 +11,11 @@ export default function Background() {
   const target = useRef(null);
 
   const mid = useParallax({
-    speed: 75,
+    speed: 60,
     targetElement: target.current,
   });
   const close = useParallax({
-    speed: 150,
+    speed: 120,
     targetElement: target.current,
   });
 

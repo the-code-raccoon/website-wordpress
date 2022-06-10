@@ -1,4 +1,5 @@
 import Header from "./Header";
+import About from "./About";
 // import FeaturedWork from "./FeaturedWork";
 // import Contact from "./Contact";
 
@@ -18,15 +19,16 @@ export default function App() {
         }}
       >
         <Header />
-        <div className="flex h-[100vh] items-center z-10">
+        <div className="z-10 flex h-[100vh] items-center">
           <div
             className="z-10 flex h-[100vh] w-[100vw] justify-center"
             id="landing"
           >
-            <div className="w-[70vw] text-left">
-              <h1 className="text-1xl mt-[17vh] text-slate-900 dark:text-white lg:text-7xl lg:leading-relaxed">
-                Hi, I'm <span className="text-purple-600">Francesca Ho</span> and I'm
-                a<span className="text-maroon"> Full-Stack Web Developer</span>
+            <div className="w-[70vw] mt-[17vh] text-left">
+              <h1 className="text-1xl text-slate-900 dark:text-white lg:text-7xl lg:leading-relaxed">
+                Hi, I'm <span className="text-purple-600">Francesca Ho</span>{" "}
+                and I'm a
+                <span className="text-maroon"> Full-Stack Web Developer</span>
                 <span className="inline-block animate-cursor-blink bg-maroon text-transparent">
                   {"|"}
                 </span>
@@ -38,7 +40,7 @@ export default function App() {
           </div>
 
           <div className="z-10 w-[100vw]" id="about">
-            {/* <About /> */}
+            <About />
           </div>
 
           <div className="z-10 w-[100vw]" id="featured-works">
