@@ -7,6 +7,7 @@ export default function Header() {
 
   const navlinks = [
     { element: "about", text: "About" },
+    { element: "skills", text: "Skills" },
     { element: "featured-works", text: "Featured Works" },
     { element: "contact", text: "Contact" },
   ];
@@ -69,3 +70,4 @@ export default function Header() {
     </nav>
   );
 }
+

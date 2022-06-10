@@ -1,5 +1,6 @@
 import Header from "./Header";
 import About from "./About";
+import Skills from "./Skills";
 // import FeaturedWork from "./FeaturedWork";
 // import Contact from "./Contact";
 
@@ -24,7 +25,7 @@ export default function App() {
             className="z-10 flex h-[100vh] w-[100vw] justify-center"
             id="landing"
           >
-            <div className="w-[70vw] mt-[17vh] text-left">
+            <div className="mt-[17vh] w-[70vw] text-left">
               <h1 className="text-1xl text-slate-900 dark:text-white lg:text-7xl lg:leading-relaxed">
                 Hi, I'm <span className="text-purple-600">Francesca Ho</span>{" "}
                 and I'm a
@@ -41,6 +42,10 @@ export default function App() {
 
           <div className="z-10 w-[100vw]" id="about">
             <About />
+          </div>
+
+          <div className="z-10 w-[100vw]" id="skills">
+            <Skills />
           </div>
 
           <div className="z-10 w-[100vw]" id="featured-works">
