@@ -11,18 +11,18 @@ export default function Background() {
   const target = useRef(null);
 
   const mid = useParallax({
-    speed: 50,
+    speed: 75,
     targetElement: target.current,
   });
   const close = useParallax({
-    speed: 100,
+    speed: 150,
     targetElement: target.current,
   });
 
-  const midExtend = 50 * 5 * -1;
-  const closeExtend = 100 * 5 * -1;
+  const midExtend = 50 * 10 * -1;
+  const closeExtend = 100 * 10 * -1;
 
-  const root = "absolute w-[200vw] h-[100vh] z-0 overflow-x-hidden";
+  const root = "absolute w-[400vw] h-[100vh] z-0 overflow-x-hidden";
   const layer = "absolute bottom-0 h-[100vh] bg-repeat-x";
 
   return (
@@ -38,6 +38,7 @@ export default function Background() {
       /> */}
       <div
         style={{
+          backgroundPositionX: "left",
           backgroundPositionY: "bottom 200px",
           backgroundSize: "auto 200px",
           backgroundImage: `url(${imageFar})`,
@@ -48,6 +49,7 @@ export default function Background() {
       />
       <div
         style={{
+          backgroundPositionX: "left",
           backgroundPositionY: "bottom 95px",
           backgroundSize: "auto 250px",
           backgroundImage: `url(${imageMid})`,
@@ -59,6 +61,7 @@ export default function Background() {
       />
       <div
         style={{
+          backgroundPositionX: "left",
           backgroundPositionY: "bottom",
           backgroundSize: "auto 300px",
           backgroundImage: `url(${imageClose})`,
