@@ -12,11 +12,11 @@ export default function Header() {
   ];
 
   return (
-    <nav className="w-100 fixed z-10 flex flex-row items-center justify-between px-4 py-2 z-20">
+    <nav className="w-100 fixed z-10 z-20 flex flex-row items-center justify-between px-4 py-2">
       <div
-        className="flex flex-row text-5xl font-bold text-orange-500 hover:cursor-pointer dark:text-purple-700"
+        className="flex flex-row hover:cursor-pointer"
         onClick={() => {
-          console.log("click")
+          console.log("click");
           const element = document.getElementById("landing");
           if (!element) {
             return;
@@ -24,9 +24,9 @@ export default function Header() {
           element.scrollIntoView();
         }}
       >
-        <h1>F. Ho</h1>
+        <h1 className="font-bold dark:text-maroon text-purple-700">F. Ho</h1>
       </div>
-      <div className="align-center flex flex-row flex-col justify-center text-purple-700 dark:text-white">
+      <div className="align-center flex flex-row flex-col justify-center text-slate-900 dark:text-white">
         {navlinks.map((link) => {
           return (
             <div

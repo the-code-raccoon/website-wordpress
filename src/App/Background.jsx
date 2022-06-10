@@ -1,4 +1,4 @@
-import { Parallax, useParallax } from "react-scroll-parallax";
+import { useParallax } from "react-scroll-parallax";
 
 import imageClose from "../assets/tree-front.png";
 import imageMid from "../assets/tree-middle.png";

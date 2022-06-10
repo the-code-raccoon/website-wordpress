@@ -25,7 +25,7 @@ export default function App() {
           >
             <div className="w-[70vw] text-left">
               <h1 className="text-1xl mt-[17vh] text-slate-900 dark:text-white lg:text-7xl lg:leading-relaxed">
-                Hi, I'm <span className="text-bleu">Francesca Ho</span> and I'm
+                Hi, I'm <span className="text-purple-600">Francesca Ho</span> and I'm
                 a<span className="text-maroon"> Full-Stack Web Developer</span>
                 <span className="inline-block animate-cursor-blink bg-maroon text-transparent">
                   {"|"}
