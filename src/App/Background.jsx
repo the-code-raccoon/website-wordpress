@@ -22,51 +22,46 @@ export default function Background() {
   const midExtend = 50 * 5 * -1;
   const closeExtend = 100 * 5 * -1;
 
-  const root = "relative w-[300vw]"
-  const artist = "fixed right-[10px] bottom-[10px] z-10 text-right"
-  const layer = "absolute top-0 bottom-0 h-[100vh]"
+  const root = "absolute w-[200vw] h-[100vh] z-0";
+  const layer = "absolute top-0 bottom-0 h-[100vh]";
 
   return (
-    <div>
-      <a
-        target="_blank"
-        href="https://aethrall.itch.io/"
-        className={artist}
-      >
-        Art by Aethrall
-      </a>
-      <div className={root} ref={target}>
-        <div
-          style={{ backgroundImage: `url(${imageBg})`, left: 0, right: 0 }}
-          className={layer}
-        />
-        <div
-          style={{
-            backgroundImage: `url(${imageFar})`,
-            left: 0,
-            right: 0,
-          }}
-          className={layer}
-        />
-        <div
-          style={{
-            backgroundImage: `url(${imageMid})`,
-            left: midExtend,
-            right: midExtend,
-          }}
-          className={layer}
-          ref={mid.ref}
-        />
-        <div
-          style={{
-            backgroundImage: `url(${imageClose})`,
-            left: closeExtend,
-            right: closeExtend,
-          }}
-          className={layer}
-          ref={close.ref}
-        />
-      </div>
+    <div className={root} ref={target}>
+      <div
+        style={{
+          backgroundImage: `url(${imageBg})`,
+          left: 0,
+          right: 0,
+          top: 0,
+        }}
+        className={layer}
+      />
+      <div
+        style={{
+          backgroundImage: `url(${imageFar})`,
+          left: 0,
+          right: 0,
+        }}
+        className={layer}
+      />
+      <div
+        style={{
+          backgroundImage: `url(${imageMid})`,
+          left: midExtend,
+          right: midExtend,
+        }}
+        className={layer}
+        ref={mid.ref}
+      />
+      <div
+        style={{
+          backgroundImage: `url(${imageClose})`,
+          left: closeExtend,
+          right: closeExtend,
+        }}
+        className={layer}
+        ref={close.ref}
+      />
     </div>
   );
 

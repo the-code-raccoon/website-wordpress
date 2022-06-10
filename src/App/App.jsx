@@ -21,20 +21,18 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import "./App.css";
 
 export default function App() {
-  const [themeMode, toggleThemeMode] = useDarkMode();
-
   return (
     <ParallaxProvider scrollAxis="horizontal">
-      {/* <Theme themeMode={themeMode}> */}
-        <div
-          className=" w-[200vw] bg-slate-200 transition ease-in-out dark:bg-zinc-900"
-          onWheel={(e) => {
-            document.scrollingElement.scrollLeft += e.deltaY * 2.5;
-          }}
-        >
-          <Header toggleThemeMode={toggleThemeMode} />
-          <div className="flex h-[100vh] items-center justify-center">
-            <Background />
+      <div
+        className=" w-[200vw] bg-[#87ceeb] transition ease-in-out dark:bg-[#131862]"
+        onWheel={(e) => {
+          document.scrollingElement.scrollLeft += e.deltaY * 2.5;
+        }}
+      >
+        <Header />
+        <div className="flex h-[100vh] items-center justify-center">
+          {/* <div className="h-[100vh]"> */}
+          <div className="z-10">
             <h1 className="text-7xl text-slate-900 dark:text-white">
               Hi, I'm <span className="text-bleu">Francesca Ho</span> and I'm a
               <span className="font-pixel text-maroon">
@@ -49,8 +47,10 @@ export default function App() {
               I'm currently looking for work and open for projects!
             </h1>
           </div>
+          <Background />
         </div>
-        {/* <Section>
+      </div>
+      {/* <Section>
             <Row>
               <SubHeader>Featured Works</SubHeader>
             </Row>
@@ -76,7 +76,6 @@ export default function App() {
               <Contact />
             </Element>
           </Row> */}
-      {/* </Theme> */}
     </ParallaxProvider>
   );
 }

@@ -3,7 +3,7 @@ import { animateScroll as scroll, scroller } from "react-scroll";
 
 type Mode = "LIGHT" | "DARK";
 
-export default function Header(props: any) {
+export default function Header() {
   const [mode, setMode] = useState<Mode>("DARK");
 
   const navlinks = [
@@ -13,25 +13,19 @@ export default function Header(props: any) {
   ];
 
   return (
-    <nav className="w-100 flex flex-row items-center justify-between px-4 py-2 absolute">
+    <nav className="w-100 absolute z-10 flex flex-row items-center justify-between px-4 py-2">
       <div
         className="flex flex-row text-5xl font-bold text-orange-500 hover:cursor-pointer dark:text-purple-700"
         onClick={() => scroll.scrollToTop()}
       >
         <h1>F. Ho</h1>
-        {/* <button
-          className="block cursor-pointer rounded border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none text-white outline-none focus:outline-none lg:hidden"
-          type="button"
-        >
-          BUTTON
-        </button> */}
       </div>
       <div className="align-center flex flex-row flex-col justify-center text-purple-700 dark:text-white">
         {navlinks.map((link) => {
           return (
             <div
               key={link.text}
-              className="mx-3 text-3xl cursor-pointer"
+              className="mx-3 cursor-pointer text-3xl"
               onClick={() => {
                 scroller.scrollTo(link.element, {
                   duration: 800,
