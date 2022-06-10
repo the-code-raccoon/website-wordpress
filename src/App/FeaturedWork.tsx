@@ -75,7 +75,7 @@ export default function FeaturedWork() {
             <div
               className={`flex h-[150px] w-[400px] rounded-[20px] bg-[${bgcolor}]`}
             >
-              <img src={link} alt={name} className="m-auto w-[300px] hover:w-[350px] transition ease-in-out" />
+              <img src={link} alt={name} className="m-auto w-[300px] hover:w-[350px] transition-[width] ease-in-out" />
             </div>
           );
         })}

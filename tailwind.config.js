@@ -17,8 +17,11 @@ module.exports = {
       },
       colors: {
         maroon: "#B3005C",
-        bleu: "#3F88C5"
-      }
+        bleu: "#3F88C5",
+      },
+      transitionProperty: {
+        width: "width",
+      },
     },
   },
   plugins: [],
