@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         pixel: ["VT323"],
+        minecraft: ["Minecraft", "VT323"],
       },
       keyframes: {
         blink: {

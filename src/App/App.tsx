@@ -33,7 +33,7 @@ export default function App() {
                 {"|"}
               </span>
             </h1>
-            <h1 className="text-3xl text-slate-900 dark:text-white">
+            <h1 className="text-3xl text-slate-900 dark:text-white font-minecraft">
               I'm currently looking for work and open for projects!
             </h1>
           </div>
