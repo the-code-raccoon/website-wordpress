@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { animateScroll as scroll, scroller } from "react-scroll";
 
 type Mode = "LIGHT" | "DARK";
 
@@ -16,7 +15,13 @@ export default function Header() {
     <nav className="w-100 fixed z-10 flex flex-row items-center justify-between px-4 py-2">
       <div
         className="flex flex-row text-5xl font-bold text-orange-500 hover:cursor-pointer dark:text-purple-700"
-        onClick={() => scroll.scrollToTop()}
+        onClick={() => {
+          const element = document.getElementById("landing");
+          if (!element) {
+            return;
+          }
+          element.scrollIntoView();
+        }}
       >
         <h1>F. Ho</h1>
       </div>
@@ -27,12 +32,11 @@ export default function Header() {
               key={link.text}
               className="mx-3 cursor-pointer text-3xl"
               onClick={() => {
-                scroller.scrollTo(link.element, {
-                  duration: 800,
-                  delay: 0,
-                  smooth: "easeInOutQuart",
-                  offset: -150,
-                });
+                const element = document.getElementById(link.element);
+                if (!element) {
+                  return;
+                }
+                element.scrollIntoView();
               }}
             >
               {link.text}

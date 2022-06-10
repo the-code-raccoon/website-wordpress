@@ -15,14 +15,14 @@ export default function App() {
   return (
     <ParallaxProvider scrollAxis="horizontal">
       <div
-        className=" w-[200vw] bg-[#78A7FF] transition ease-in-out dark:bg-[#38285c]"
+        className=" w-[400vw] bg-[#78A7FF] transition ease-in-out dark:bg-[#38285c]"
         onWheel={(e) => {
           document.scrollingElement.scrollLeft += e.deltaY * 2.5;
         }}
       >
         <Header />
         <div className="flex h-[100vh] items-center">
-          <div className="z-10 flex w-[100vw] justify-center">
+          <div className="z-10 flex w-[100vw] justify-center" id="landing">
             <div className="w-[70%] text-left">
               <h1 className="text-7xl text-slate-900 dark:text-white">
                 Hi, I'm <span className="text-bleu">Francesca Ho</span> and I'm
@@ -37,38 +37,21 @@ export default function App() {
             </div>
           </div>
 
-          <div className="z-10 w-[100vw]">
+          <div className="z-10 w-[100vw]" id="about">
+            {/* <About /> */}
+          </div>
+
+          <div className="z-10 w-[100vw]" id="featured-works">
             <FeaturedWork />
           </div>
+
+          <div className="z-10 w-[100vw]" id="contact">
+            <Contact />
+          </div>
+
           <Background />
         </div>
       </div>
-      {/* <Section>
-            <Row>
-              <SubHeader>Featured Works</SubHeader>
-            </Row>
-            <Row>
-              <Element name="featured-works">
-                <FeaturedWork />
-              </Element>
-            </Row>
-          </Section>
-          <Section>
-            <Row>
-              <SubHeader>About</SubHeader>
-            </Row>
-            <Row>
-              <Element name="about">fdsfdsfksd</Element>
-            </Row>
-          </Section>
-          <Row>
-            <SubHeader>Contact Me!</SubHeader>
-          </Row>
-          <Row>
-            <Element name="contact">
-              <Contact />
-            </Element>
-          </Row> */}
     </ParallaxProvider>
   );
 }
