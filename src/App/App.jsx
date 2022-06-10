@@ -18,7 +18,7 @@ export default function App() {
         }}
       >
         <Header />
-        <div className="flex h-[100vh] items-center">
+        <div className="flex h-[100vh] items-center z-10">
           <div
             className="z-10 flex h-[100vh] w-[100vw] justify-center"
             id="landing"
