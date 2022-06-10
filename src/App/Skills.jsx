@@ -26,41 +26,50 @@ export default function Skills() {
     { text: "Ruby", link: "ruby" },
     { text: "Ruby on Rails", link: "rubyonrails" },
   ];
-  const design = [
+  const misc = [
+    { text: "Git", link: "git" },
+    { text: "GitHub", link: "github" },
+    { text: "Linux", link: "linux" },
     { text: "Figma", link: "figma" },
     { text: "Adobe Illustrator", link: "adobeillustrator" },
     { text: "Adobe Photoshop", link: "adobephotoshop" },
     { text: "Adobe Premiere Pro", link: "adobepremierepro" },
     { text: "Adobe After Effects", link: "adobeaftereffects" },
   ];
-  const system = [
-    { text: "Git", link: "git" },
-    { text: "GitHub", link: "github" },
-    { text: "Linux", link: "linux" },
+
+  const skills = [
+    { text: "Front-End", set: frontend },
+    { text: "Back-End", set: backend },
+    { text: "Misc", set: misc },
   ];
 
   return (
-    <div className="z-10 flex h-[100vh] w-[100vw] justify-center text-slate-900 dark:text-white">
-      <div className="mt-[17vh] w-[70vw] text-left">
-        <h1>Skills</h1>
-        <div className="flex w-[30vw] min-w-[300px]">
-          <h1>Back-End</h1>
-          {backend.map(({ text, link }) => {
-            return (
-              <div
-                key={link}
-                className="align-center flex flex-col justify-center rounded-md border-4 border-slate-900"
-              >
-                <img
-                  className="mx-auto w-[50px] h-[50px]"
-                  src={`https://raw.githubusercontent.com/the-code-raccoon/website/f199ef1d2b791076cdc129297dfc465918149734/src/assets/icons/${link}.svg`}
-                  alt={text}
-                />
-                <h1 className="text-base">{text}</h1>
+    <div className="z-10 flex h-[100vh] w-[100vw] justify-center text-slate-900">
+      <div className="mt-[10vh] text-center flex">
+        {skills.map(({ text, set }) => {
+          return (
+            <div key={text} className="w-[20vw] mx-3">
+              <h1 className=" dark:text-white">{text}</h1>
+              <div className="flex h-[60vh] flex-wrap justify-evenly items-evenly rounded-md p-3 bg-slate-200/[0.5] shadow">
+                {set.map(({ text, link }) => {
+                  return (
+                    <div
+                      key={link}
+                      className="align-center flex h-[100px] flex-col flex-wrap justify-center"
+                    >
+                      <img
+                        className="mx-auto h-[50px] w-[50px]"
+                        src={`https://raw.githubusercontent.com/the-code-raccoon/website/816afe171525681bf8d750a425b794358d2ec50d/src/assets/icons/${link}.svg`}
+                        alt={text}
+                      />
+                      <h1 className="text-base">{text}</h1>
+                    </div>
+                  );
+                })}
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
