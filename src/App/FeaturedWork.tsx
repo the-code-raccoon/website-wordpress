@@ -41,4 +41,45 @@
 //     </Row>
 //   );
 // }
-export const a = 1;
+
+export default function FeaturedWork() {
+  const works = [
+    {
+      name: "Charcuterie",
+      link: "https://raw.githubusercontent.com/the-code-raccoon/website/ebca3ba315deb25ed16b66ab95e19bb07f4b6ac2/assets/Charcuterie.svg",
+      bgcolor: "#ffffff",
+    },
+    {
+      name: "Foodie",
+      link: "https://raw.githubusercontent.com/the-code-raccoon/website/c0fea90a41bf7b8ad4c447bae694010b830499c7/assets/foodie.svg",
+      bgcolor: "#DA4167",
+    },
+    {
+      name: "GOTHREAU",
+      link: "https://raw.githubusercontent.com/the-code-raccoon/website/ebca3ba315deb25ed16b66ab95e19bb07f4b6ac2/assets/GOTHREAU.svg",
+      bgcolor: "#674EA7",
+    },
+    {
+      name: "Interview Scheduler",
+      link: "https://raw.githubusercontent.com/the-code-raccoon/scheduler/main/public/images/logo.png",
+      bgcolor: "#222f3e",
+    },
+  ];
+
+  return (
+    <div className="z-10 flex h-[100vh] w-[100vw] justify-center text-slate-900 dark:text-white">
+      <div className="bg-[#222f3e] hidden bg-[#ffffff] bg-[#DA4167] bg-[#674EA7]" />
+      <div className="mt-[17vh] w-[78vw] text-left">
+        {works.map(({ name, link, bgcolor }) => {
+          return (
+            <div
+              className={`flex h-[150px] w-[400px] rounded-[20px] bg-[${bgcolor}]`}
+            >
+              <img src={link} alt={name} className="m-auto w-[300px] hover:w-[350px] transition ease-in-out" />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

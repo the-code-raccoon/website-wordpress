@@ -1,7 +1,7 @@
 import Header from "./Header";
 import About from "./About";
 import Skills from "./Skills";
-// import FeaturedWork from "./FeaturedWork";
+import FeaturedWork from "./FeaturedWork";
 // import Contact from "./Contact";
 
 import Background from "./Background";
@@ -35,7 +35,7 @@ export default function App() {
           </div>
 
           <div className="z-10 w-[100vw]" id="featured-works">
-            {/* <FeaturedWork /> */}
+            <FeaturedWork />
           </div>
 
           <div className="z-10 w-[100vw]" id="contact">
