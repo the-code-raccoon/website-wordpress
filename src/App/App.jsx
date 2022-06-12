@@ -31,7 +31,10 @@ export default function App() {
             <About />
           </div>
 
-          <div className="z-10 w-[200vw] md:w-[100vw]" id="skills">
+          <div
+            className="z-10 w-[300vw] sm:w-[185vw] md:w-[160vw] lg:w-[120vw] xl:w-[100vw]"
+            id="skills"
+          >
             <Skills />
           </div>
 

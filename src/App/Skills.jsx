@@ -44,25 +44,25 @@ export default function Skills() {
   ];
 
   return (
-    <div className="z-10 flex h-[100vh] w-[100vw] justify-center text-slate-900">
-      <div className="mt-[10vh] flex text-center">
+    <div className="z-10 flex h-[100vh] w-[100%] justify-center text-slate-900">
+      <div className="xl-w-[80%] mt-[10vh] flex justify-between text-center">
         {skills.map(({ text, set }) => {
           return (
-            <div key={text} className="mx-3 w-[20vw]">
+            <div key={text} className="mx-3 w-[80%] max-w-[400px] md-w-[30%]">
               <h1 className=" dark:text-white">{text}</h1>
-              <div className="flex h-[60vh] flex-wrap content-evenly justify-evenly rounded-md bg-slate-200/[0.5] p-3">
+              <div className="flex h-[75vh] flex-wrap content-evenly justify-evenly rounded-md bg-slate-200/[0.5] p-3">
                 {set.map(({ text, link }) => {
                   return (
                     <div
                       key={link}
-                      className="align-center mx-3 flex h-[100px] flex-col flex-wrap justify-center"
+                      className="align-center mx-2 sm:mx-3 flex h-[100px] flex-col flex-wrap justify-center"
                     >
                       <img
-                        className="mx-auto h-[50px] w-[50px]"
+                        className="sm:h-[50px] sm:w-[50px] mx-auto h-[30px] w-[30px]"
                         src={`https://raw.githubusercontent.com/the-code-raccoon/website/816afe171525681bf8d750a425b794358d2ec50d/src/assets/icons/${link}.svg`}
                         alt={text}
                       />
-                      <h1 className="text-base">{text}</h1>
+                      <h1 className="text-sm sm-text-base">{text}</h1>
                     </div>
                   );
                 })}
