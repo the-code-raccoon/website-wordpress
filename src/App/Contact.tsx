@@ -11,4 +11,12 @@
 //     </Container>
 //   );
 // }
-export const a = 1;
+export default function Contact() {
+  return (
+    <div className="z-10 flex h-[100vh] w-[100vw] justify-center text-slate-900">
+      <div className="mt-[10vh] flex text-center">
+        Contact
+      </div>
+    </div>
+  );
+}

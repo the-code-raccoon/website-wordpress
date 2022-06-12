@@ -2,7 +2,7 @@ import Header from "./Header";
 import About from "./About";
 import Skills from "./Skills";
 import FeaturedWork from "./FeaturedWork";
-// import Contact from "./Contact";
+import Contact from "./Contact";
 
 import Background from "./Background";
 
@@ -15,7 +15,7 @@ export default function App() {
   return (
     <ParallaxProvider scrollAxis="horizontal">
       <div
-        className=" w-[400vw] bg-[#78A7FF] transition ease-in-out dark:bg-[#38285c]"
+        className=" w-[500vw] bg-[#78A7FF] transition ease-in-out dark:bg-[#38285c]"
         onWheel={(e) => {
           document.scrollingElement.scrollLeft += e.deltaY * 2.5;
         }}
@@ -39,7 +39,7 @@ export default function App() {
           </div>
 
           <div className="z-10 w-[100vw]" id="contact">
-            {/* <Contact /> */}
+            <Contact />
           </div>
 
           <Background />

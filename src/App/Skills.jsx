@@ -45,17 +45,17 @@ export default function Skills() {
 
   return (
     <div className="z-10 flex h-[100vh] w-[100vw] justify-center text-slate-900">
-      <div className="mt-[10vh] text-center flex">
+      <div className="mt-[10vh] flex text-center">
         {skills.map(({ text, set }) => {
           return (
-            <div key={text} className="w-[20vw] mx-3">
+            <div key={text} className="mx-3 w-[20vw]">
               <h1 className=" dark:text-white">{text}</h1>
-              <div className="flex h-[60vh] flex-wrap justify-evenly content-evenly rounded-md p-3 bg-slate-200/[0.5]">
+              <div className="flex h-[60vh] flex-wrap content-evenly justify-evenly rounded-md bg-slate-200/[0.5] p-3">
                 {set.map(({ text, link }) => {
                   return (
                     <div
                       key={link}
-                      className="align-center flex h-[100px] flex-col flex-wrap justify-center"
+                      className="align-center mx-3 flex h-[100px] flex-col flex-wrap justify-center"
                     >
                       <img
                         className="mx-auto h-[50px] w-[50px]"

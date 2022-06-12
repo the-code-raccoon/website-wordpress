@@ -3,7 +3,7 @@ import { useParallax } from "react-scroll-parallax";
 import imageClose from "../assets/tree-front.png";
 import imageMid from "../assets/tree-middle.png";
 import imageFar from "../assets/tree-back.png";
-import imageBg from "../assets/clouds.png";
+import imageBg from "../assets/clouds-top.png";
 
 import { useRef } from "react";
 
@@ -23,20 +23,20 @@ export default function Background() {
   const closeExtend = 100 * 10 * -1;
 
   const root =
-    "absolute w-[400vw] h-[100vh] z-0 overflow-x-hidden overflow-y-hidden";
+    "absolute w-[500vw] h-[100vh] z-0 overflow-x-hidden overflow-y-hidden";
   const layer = "absolute bottom-0 h-[100vh] bg-repeat-x";
 
   return (
     <div className={root} ref={target}>
-      {/* <div
+      <div
         style={{
           backgroundSize: "50%",
           backgroundImage: `url(${imageBg})`,
           left: 0,
           right: 0,
         }}
-        className={layer + " bg-repeat-y"}
-      /> */}
+        className={layer}
+      />
       <div
         style={{
           backgroundPosition: "bottom 200px left 0",
