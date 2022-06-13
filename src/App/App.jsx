@@ -27,7 +27,7 @@ export default function App() {
             <Landing />
           </div>
 
-          <div className="z-10 w-[200vw] lg:w-[100vw]" id="about">
+          <div className="z-10 w-[250vw] sm:w-[200vw] lg:w-[100vw]" id="about">
             <About />
           </div>
 
