@@ -3,7 +3,7 @@ import { useState } from "react";
 type Mode = "LIGHT" | "DARK";
 
 export default function Header() {
-  const [mode, setMode] = useState<Mode>("DARK");
+  const [mode, setMode] = useState<Mode>("LIGHT");
 
   const navlinks = [
     { element: "about", text: "About" },
@@ -63,7 +63,7 @@ export default function Header() {
         <div
           className={
             "h-5 w-5 rounded-full bg-purple-900 shadow-md transition ease-in-out " +
-            (mode === "DARK" ? "" : " translate-x-6 transform")
+            (mode === "LIGHT" ? "" : " translate-x-6 transform")
           }
         ></div>
       </div>
