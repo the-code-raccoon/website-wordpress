@@ -19,8 +19,8 @@ export default function Background() {
     targetElement: target.current,
   });
 
-  const midExtend = 50 * 10 * -1;
-  const closeExtend = 100 * 10 * -1;
+  const midExtend = 50 * 11 * -1;
+  const closeExtend = 100 * 11 * -1;
 
   const root =
     // "absolute w-[500vw] h-[100vh] z-0 overflow-x-hidden overflow-y-hidden";
