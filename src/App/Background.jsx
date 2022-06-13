@@ -24,7 +24,7 @@ export default function Background() {
 
   const root =
     // "absolute w-[500vw] h-[100vh] z-0 overflow-x-hidden overflow-y-hidden";
-    "absolute w-[900vw] h-[100vh] z-0 overflow-x-hidden overflow-y-hidden";
+    "absolute w-[1200vw] sm:w-[885vw] md:w-[810vw] lg:w-[620vw] xl:w-[520vw] h-[100vh] z-0 overflow-x-hidden overflow-y-hidden";
   const layer = "absolute bottom-0 h-[100vh] bg-repeat-x";
 
   return (

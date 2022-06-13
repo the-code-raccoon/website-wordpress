@@ -15,8 +15,7 @@ export default function App() {
   return (
     <ParallaxProvider scrollAxis="horizontal">
       <div
-        className="min-w-[1300vw] bg-[#78A7FF] transition ease-in-out dark:bg-[#38285c]"
-        // className="min-w-[500vw] bg-[#78A7FF] transition ease-in-out dark:bg-[#38285c]"
+        className="w-[1200vw] sm:w-[885vw] md:w-[810vw] lg:w-[620vw] xl:w-[520vw] bg-[#78A7FF] transition ease-in-out dark:bg-[#38285c]"
         onWheel={(e) => {
           document.scrollingElement.scrollLeft += e.deltaY * 2.5;
         }}
