@@ -97,7 +97,7 @@ export default function FeaturedWork() {
 
                 {work.preview && (
                   <a
-                    href="https://google.com"
+                    href={work.preview}
                     className="text-black no-underline"
                     target="_blank"
                     rel="noreferrer"
