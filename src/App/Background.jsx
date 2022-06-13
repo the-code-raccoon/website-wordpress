@@ -31,12 +31,12 @@ export default function Background() {
     <div className={root} ref={target}>
       <div
         style={{
-          backgroundSize: "50%",
+          backgroundSize: "40%",
           backgroundImage: `url(${imageBg})`,
           left: 0,
           right: 0,
         }}
-        className={layer}
+        className={layer + " opacity-80 dark:opacity-50"}
       />
       <div
         style={{
@@ -46,7 +46,7 @@ export default function Background() {
           left: 0,
           right: 0,
         }}
-        className={layer}
+        className={layer + " dark:brightness-50"}
       />
       <div
         style={{
@@ -56,7 +56,7 @@ export default function Background() {
           left: midExtend,
           right: midExtend,
         }}
-        className={layer}
+        className={layer + " dark:brightness-50"}
         ref={mid.ref}
       />
       <div
@@ -67,7 +67,7 @@ export default function Background() {
           left: closeExtend,
           right: closeExtend,
         }}
-        className={layer}
+        className={layer + " dark:brightness-50"}
         ref={close.ref}
       />
     </div>

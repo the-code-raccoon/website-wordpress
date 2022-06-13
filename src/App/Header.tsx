@@ -30,9 +30,7 @@ export default function Header() {
     // } else {
     //   console.log("Element is NOT in the viewport!");
     // }
-    if (
-      bounding.left >= 0
-    ) {
+    if (bounding.left >= 0) {
       console.log("Element is in the viewport!");
     } else {
       console.log("Element is NOT in the viewport!");
@@ -75,9 +73,12 @@ export default function Header() {
         })}
       </div>
       <div className="align-center flex flex-row flex-col justify-center text-slate-900 dark:text-white lg:hidden">
-        <button className="mr-1 sm:mx-4" onClick={() => {
-          console.log(isElementInViewport("about"))
-        }}>
+        <button
+          className="mr-1 sm:mx-4"
+          onClick={() => {
+            console.log(isElementInViewport("about"));
+          }}
+        >
           <span className="mr-3 text-sm sm:text-3xl">{"<"}</span>
           <span className="text-sm sm:align-top sm:text-2xl">Back</span>
         </button>

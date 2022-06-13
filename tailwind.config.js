@@ -23,7 +23,6 @@ module.exports = {
         width: "width",
         fontSize: "font-size",
       },
-      
     },
   },
   plugins: [],
