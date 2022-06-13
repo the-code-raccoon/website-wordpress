@@ -2,9 +2,9 @@ export default function About() {
   return (
     <div className="z-10 flex h-[100vh] w-[100%] justify-center text-slate-900 dark:text-white">
       <div className="mt-[17vh] flex w-[85%] flex-row text-left">
-        <div className="mx-3 w-[100%]">
+        <div className="mx-3 w-[80vw] sm:w-[100%]">
           <h1>About</h1>
-          <h1 className="text-[0.875rem] sm:text-[1rem] mt-3 leading-relaxed">
+          <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
             I'm a full-stack developer based out of Toronto, Ontario. I
             specialize in front-end development and have a passion for making
             user-end applications that perform fast and look amazing. When I'm
@@ -12,7 +12,7 @@ export default function About() {
             tunnel through rhythm games, or spending too much time making my
             Minecraft house look like my dream home.
           </h1>
-          <h1 className="text-[0.875rem] sm:text-[1rem] mt-3 leading-relaxed">
+          <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
             Link to my{" "}
             <a
               href="https://resume.creddle.io/resume/h7quggpp1wb"
@@ -23,9 +23,9 @@ export default function About() {
             </a>
           </h1>
         </div>
-        <div className="mx-3 w-[100%]">
+        <div className="mx-3 w-[80vw] sm:w-[100%]">
           <h1>Lore</h1>
-          <h1 className="text-[0.875rem] sm:text-[1rem] mt-3 leading-relaxed">
+          <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
             The first time I ever picked up the proverbial coding pen I was 11
             years old at a 'Girls Who Code' workshop happening at my middle
             school - and the rest was history. After a few years at the
