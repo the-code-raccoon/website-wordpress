@@ -12,6 +12,16 @@ export default function About() {
             tunnel through rhythm games, or spending too much time making my
             Minecraft house look like my dream home.
           </h1>
+          <h1 className="text-sm sm:text-base">
+            Link to my resume!{" "}
+            <a
+              href="https://resume.creddle.io/resume/h7quggpp1wb"
+              target="_blank"
+              rel="noreferrer"
+            >
+              https://resume.creddle.io/resume/h7quggpp1wb
+            </a>
+          </h1>
         </div>
         <div className="mx-3 w-[100%]">
           <h1>Lore</h1>

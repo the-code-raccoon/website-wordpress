@@ -45,7 +45,7 @@ export default function App() {
             <FeaturedWork />
           </div>
 
-          <div className="z-10 w-[200vw] md:w-[100vw]" id="contact">
+          <div className="z-10 w-[100vw]" id="contact">
             <Contact />
           </div>
 
