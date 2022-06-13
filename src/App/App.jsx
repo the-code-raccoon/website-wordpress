@@ -39,7 +39,7 @@ export default function App() {
           </div>
 
           <div
-            className="z-10 w-[450vw] sm:w-[185vw] md:w-[160vw] lg:w-[120vw] xl:w-[100vw]"
+            className="z-10 w-[450vw] sm:w-[300vw] md:w-[250vw] lg:w-[200vw] xl:w-[120vw]"
             id="featured-works"
           >
             <FeaturedWork />

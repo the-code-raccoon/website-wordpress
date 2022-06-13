@@ -61,22 +61,22 @@ export default function FeaturedWork() {
 
   return (
     <div className="z-10 flex h-[100vh] w-[100%] justify-center text-slate-900">
-      <div className="xl-w-[80%] mt-[10vh] flex w-[90%] justify-between text-center">
+      <div className="xl-w-[80%] mt-[10vh] flex w-[90%] justify-center text-center">
         {works.map((work) => {
           return (
             <div
               className="md-w-[30%] mx-3 w-[80%] max-w-[400px]"
               key={work.name}
             >
-              <div className="flex h-[75vh] flex-wrap content-between justify-evenly rounded-md bg-slate-200/[0.8] pt-4 pb-8">
-                <div className="w-[100%]">
+              <div className="flex h-[80vh] flex-wrap content-between justify-evenly rounded-md bg-slate-200/[0.8] py-4">
+                <div className="w-[90%]">
                   <div
-                    className={`flex h-[100px] w-[350px] rounded-[10px] bg-[${work.bgcolor}] mx-auto mb-4`}
+                    className={`flex h-[100px] w-[100%] rounded-[10px] bg-[${work.bgcolor}] mx-auto mb-4`}
                   >
                     <img
                       src={work.logo}
                       alt={work.name}
-                      className="m-auto w-[280px] transition-[width] ease-in-out hover:w-[300px]"
+                      className="m-auto w-[80%] transition-[width] ease-in-out hover:w-[90%]"
                     />
                   </div>
 
