@@ -24,7 +24,7 @@ export default function FeaturedWork() {
       image:
         "https://raw.githubusercontent.com/robotsch/Foodie/main/docs/landing-page.png",
       github: "https://github.com/robotsch/Foodie",
-      preview: "lhl-midterm-foodie.herokuapp.com/",
+      preview: "https://lhl-midterm-foodie.herokuapp.com/",
       stack: "NodeJS, Express, jQuery, Bootstrap, PostgreSQL",
       btntext: "black",
     },
