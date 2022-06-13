@@ -12,29 +12,43 @@ export default function Header() {
     { element: "contact", text: "Contact" },
   ];
 
+  const navlinks2 = [{ element: "landing" }, ...navlinks];
+
   const svg = "h-[20px] w-[20px] sm:h-[24px] sm:w-[24px]";
 
-  const isElementInViewport = function (el: string) {
-    const element = document.getElementById(el);
-    if (!element) return;
-    const bounding = element.getBoundingClientRect();
-    console.log(bounding);
+  const closestElement = () => {
+    const elements = [];
+    const boundings = [];
 
-    // if (
-    //   bounding.top >= 0 &&
-    //   bounding.left >= 0 &&
-    //   bounding.right <= window.innerWidth &&
-    //   bounding.bottom <= window.innerHeight
-    // ) {
-    //   console.log("Element is in the viewport!");
-    // } else {
-    //   console.log("Element is NOT in the viewport!");
-    // }
-    if (bounding.left >= 0) {
-      console.log("Element is in the viewport!");
-    } else {
-      console.log("Element is NOT in the viewport!");
+    for (const navlink of navlinks2) {
+      const element = document.getElementById(navlink.element);
+      if (!element) return;
+      elements.push(element);
+      boundings.push(element.getBoundingClientRect().left);
     }
+
+    let closest = 0;
+    for (let i = 0; i < boundings.length; i++) {
+      if (boundings[i] <= 0) {
+        closest = i;
+      }
+    }
+
+    return { elements, closest };
+  };
+
+  const previousElement = () => {
+    const { elements, closest } = closestElement()!;
+    if (closest === 0) return;
+    console.log(elements[closest]);
+    elements[closest - 1].scrollIntoView();
+  };
+
+  const nextElement = () => {
+    const { elements, closest } = closestElement()!;
+    if (closest === 4) return;
+    console.log(elements[closest]);
+    elements[closest + 1].scrollIntoView();
   };
 
   return (
@@ -49,7 +63,7 @@ export default function Header() {
           element.scrollIntoView();
         }}
       >
-        <h1 className="my-auto text-base font-bold text-purple-700 dark:text-maroon sm:text-3xl">
+        <h1 className="my-auto text-base font-bold text-purple-700 transition duration-300 ease-in-out hover:-translate-y-1 dark:text-maroon sm:text-3xl">
           F. Ho
         </h1>
       </button>
@@ -58,7 +72,7 @@ export default function Header() {
           return (
             <div
               key={link.text}
-              className="mx-4 cursor-pointer text-2xl"
+              className="mx-4 cursor-pointer text-2xl transition duration-300 ease-in-out hover:-translate-y-1 hover:text-slate-500"
               onClick={() => {
                 const element = document.getElementById(link.element);
                 if (!element) {
@@ -74,23 +88,15 @@ export default function Header() {
       </div>
       <div className="align-center flex flex-row flex-col justify-center text-slate-900 dark:text-white lg:hidden">
         <button
-          className="mr-1 sm:mx-4"
-          onClick={() => {
-            console.log(isElementInViewport("about"));
-          }}
+          className="mr-1 transition duration-300 ease-in-out hover:-translate-y-1 hover:text-slate-500 sm:mx-4"
+          onClick={previousElement}
         >
           <span className="mr-3 text-sm sm:text-3xl">{"<"}</span>
           <span className="text-sm sm:align-top sm:text-2xl">Back</span>
         </button>
         <button
-          className="ml-1 sm:mx-4"
-          onClick={() => {
-            const element = document.getElementById("about");
-            if (!element) {
-              return;
-            }
-            element.scrollIntoView();
-          }}
+          className="ml-1 transition duration-300 ease-in-out hover:-translate-y-1 hover:text-slate-500 sm:mx-4"
+          onClick={nextElement}
         >
           <span className="mr-3 text-sm sm:align-top sm:text-2xl">Next</span>
           <span className="text-sm sm:text-3xl">{">"}</span>
