@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.03030a0e.css",
-    "main.js": "/static/js/main.4d403f7b.js",
+    "main.js": "/static/js/main.2e63450e.js",
     "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
     "static/media/tree-front.png": "/static/media/tree-front.17f416e5b2f863d8661b.png",
     "static/media/tree-middle.png": "/static/media/tree-middle.2ed22853f018c1db7c0a.png",
@@ -14,11 +14,11 @@
     "static/media/Minecraft.woff2": "/static/media/Minecraft.6afb93cf8060bea181d2.woff2",
     "index.html": "/index.html",
     "main.03030a0e.css.map": "/static/css/main.03030a0e.css.map",
-    "main.4d403f7b.js.map": "/static/js/main.4d403f7b.js.map",
+    "main.2e63450e.js.map": "/static/js/main.2e63450e.js.map",
     "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.03030a0e.css",
-    "static/js/main.4d403f7b.js"
+    "static/js/main.2e63450e.js"
   ]
 }
