@@ -61,7 +61,7 @@ export default function Header() {
           element.scrollIntoView();
         }}
       >
-        <h1 className="my-auto text-base font-bold text-purple-700 transition duration-300 ease-in-out hover:-translate-y-1 dark:text-maroon sm:text-3xl">
+        <h1 className="my-auto text-base font-bold text-amber-500 transition duration-300 ease-in-out hover:-translate-y-1 dark:text-indigo-700 sm:text-3xl">
           F. Ho
         </h1>
       </button>
