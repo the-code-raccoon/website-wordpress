@@ -21,7 +21,9 @@ module.exports = {
       },
       transitionProperty: {
         width: "width",
+        fontSize: "font-size",
       },
+      
     },
   },
   plugins: [],
