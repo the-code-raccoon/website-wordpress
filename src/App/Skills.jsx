@@ -31,10 +31,10 @@ export default function Skills() {
     { text: "GitHub", link: "github" },
     { text: "Linux", link: "linux" },
     { text: "Figma", link: "figma" },
-    { text: "Adobe Illustrator", link: "adobeillustrator" },
-    { text: "Adobe Photoshop", link: "adobephotoshop" },
-    { text: "Adobe Premiere Pro", link: "adobepremierepro" },
-    { text: "Adobe After Effects", link: "adobeaftereffects" },
+    { text: "Illustrator", link: "adobeillustrator" },
+    { text: "Photoshop", link: "adobephotoshop" },
+    { text: "Premiere Pro", link: "adobepremierepro" },
+    { text: "After Effects", link: "adobeaftereffects" },
   ];
 
   const skills = [
