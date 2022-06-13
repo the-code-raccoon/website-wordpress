@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=VT323&display=swap");
-@import url("http://fonts.cdnfonts.com/css/minecraft-4");
 
 @tailwind base;
 @tailwind components;
@@ -12,7 +11,7 @@ html {
 }
 
 * {
-  font-family: "Minecraft";
+  font-family: "Minecraftia", "VT323";
   box-sizing: border-box;
 }
 
@@ -23,4 +22,13 @@ body::-webkit-scrollbar {
 
 html {
   scrollbar-width: none;
+}
+
+@font-face {
+  font-family: "Minecraftia";
+  src: url("../assets/fonts/minecraft-font/Minecraft.eot");
+  src: url("../assets/fonts/minecraft-font/Minecraft.woff2") format("woff2"),
+    url("../assets/fonts/minecraft-font/Minecraft.woff") format("woff"),
+    url("../assets/fonts/minecraft-font/minecraft_font.ttf") format("truetype"),
+    url("../assets/fonts/minecraft-font/Minecraft.svg") format("svg");
 }

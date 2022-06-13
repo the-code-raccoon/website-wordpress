@@ -27,12 +27,12 @@ export default function Header() {
       >
         <h1 className="font-bold dark:text-maroon text-purple-700">F. Ho</h1>
       </div>
-      <div className="align-center flex flex-row flex-col justify-center text-slate-900 dark:text-white">
+      <div className="align-center flex-row flex-col justify-center text-slate-900 dark:text-white hidden lg:flex">
         {navlinks.map((link) => {
           return (
             <div
               key={link.text}
-              className="mx-3 cursor-pointer text-3xl"
+              className="mx-4 cursor-pointer text-2xl"
               onClick={() => {
                 const element = document.getElementById(link.element);
                 if (!element) {
