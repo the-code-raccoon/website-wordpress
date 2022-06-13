@@ -40,14 +40,12 @@ export default function Header() {
   const previousElement = () => {
     const { elements, closest } = closestElement()!;
     if (closest === 0) return;
-    console.log(elements[closest]);
     elements[closest - 1].scrollIntoView();
   };
 
   const nextElement = () => {
     const { elements, closest } = closestElement()!;
     if (closest === 4) return;
-    console.log(elements[closest]);
     elements[closest + 1].scrollIntoView();
   };
 
