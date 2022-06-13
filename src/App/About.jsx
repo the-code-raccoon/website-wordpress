@@ -4,7 +4,7 @@ export default function About() {
       <div className="mt-[17vh] flex w-[85%] flex-row text-left">
         <div className="mx-3 w-[100%]">
           <h1>About</h1>
-          <h1 className="text-sm sm:text-base">
+          <h1 className="text-[0.875rem] sm:text-[1rem] mt-3 leading-relaxed">
             I'm a full-stack developer based out of Toronto, Ontario. I
             specialize in front-end development and have a passion for making
             user-end applications that perform fast and look amazing. When I'm
@@ -12,20 +12,20 @@ export default function About() {
             tunnel through rhythm games, or spending too much time making my
             Minecraft house look like my dream home.
           </h1>
-          <h1 className="text-sm sm:text-base">
-            Link to my resume!{" "}
+          <h1 className="text-[0.875rem] sm:text-[1rem] mt-3 leading-relaxed">
+            Link to my{" "}
             <a
               href="https://resume.creddle.io/resume/h7quggpp1wb"
               target="_blank"
               rel="noreferrer"
             >
-              https://resume.creddle.io/resume/h7quggpp1wb
+              resume!
             </a>
           </h1>
         </div>
         <div className="mx-3 w-[100%]">
           <h1>Lore</h1>
-          <h1 className="text-sm sm:text-base">
+          <h1 className="text-[0.875rem] sm:text-[1rem] mt-3 leading-relaxed">
             The first time I ever picked up the proverbial coding pen I was 11
             years old at a 'Girls Who Code' workshop happening at my middle
             school - and the rest was history. After a few years at the
@@ -40,7 +40,7 @@ export default function About() {
             boring myself in an academic setting, I attended a short yet
             intensive full-stack web development bootcamp at Lighthouse Labs.
             After such a hands-on experience, I am more sure than ever that
-            coding and web development is where my future lies. */}
+          coding and web development is where my future lies. */}
           </h1>
         </div>
       </div>
