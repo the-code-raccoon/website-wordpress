@@ -25,17 +25,18 @@ export default function About() {
       <div className="mt-[17vh] flex w-[85%] flex-row text-left">
         <div className="mx-3 w-[80vw] sm:w-[100%]">
           <h1>About</h1>
+          <div dangerouslySetInnerHTML={{ __html: texts.about }}></div>
           <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
             {texts.about}
           </h1>
-          <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
+          {/* <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
             I'm a full-stack developer based out of Toronto, Ontario. I
             specialize in front-end development and have a passion for making
             user-end applications that perform fast and look amazing. When I'm
             not coding, I am stacking blocks in Tetris, giving myself carpal
             tunnel through rhythm games, or spending too much time making my
             Minecraft house look like my dream home.
-          </h1>
+          </h1> */}
           <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
             Link to my{" "}
             <a
