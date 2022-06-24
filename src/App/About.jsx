@@ -1,8 +1,23 @@
-import { useEffect } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export default function About() {
+  const [texts, setTexts] = useState({
+    about: "",
+    lore: "",
+  });
+
   useEffect(() => {
-    fetch("https://example.com/wp-json/wp/v2/posts").then((res) => console.log(res, res.data));
+    axios
+      .get("http://localhost:10003/wp-json/wp/v2/posts?slug=about")
+      .then((res) => {
+        console.log(res.data[0].content.rendered);
+
+        setTexts({
+          about: res.data[0].content.rendered,
+          lore: "",
+        });
+      });
   }, []);
 
   return (
@@ -10,6 +25,9 @@ export default function About() {
       <div className="mt-[17vh] flex w-[85%] flex-row text-left">
         <div className="mx-3 w-[80vw] sm:w-[100%]">
           <h1>About</h1>
+          <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
+            {texts.about}
+          </h1>
           <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
             I'm a full-stack developer based out of Toronto, Ontario. I
             specialize in front-end development and have a passion for making
@@ -40,13 +58,6 @@ export default function About() {
             attended a short yet intensive full-stack web development bootcamp
             at Lighthouse Labs. After such a hands-on experience, I am more sure
             than ever that coding and web development is where my future lies.
-            {/* After a few years at the University of Toronto's Computer Science
-            program, I decided to take a leap of faith. I took a year off and
-            worked in hospitality where my itch for coding came back. Instead of
-            boring myself in an academic setting, I attended a short yet
-            intensive full-stack web development bootcamp at Lighthouse Labs.
-            After such a hands-on experience, I am more sure than ever that
-          coding and web development is where my future lies. */}
           </h1>
         </div>
       </div>
