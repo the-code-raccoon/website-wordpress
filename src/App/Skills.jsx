@@ -9,6 +9,8 @@ export default function Skills() {
     { text: "Bootstrap", link: "bootstrap" },
     { text: "MaterialUI", link: "mui" },
     { text: "TailwindCSS", link: "tailwindcss" },
+    { text: "StoryBook", link: "storybook" },
+    { text: "Cypress", link: "cypress" },
     { text: "jQuery", link: "jquery" },
   ];
   const backend = [
@@ -17,8 +19,6 @@ export default function Skills() {
     { text: "TypeScript", link: "typescript" },
     { text: "Express", link: "express" },
     { text: "Jest", link: "jest" },
-    { text: "StoryBook", link: "storybook" },
-    { text: "Cypress", link: "cypress" },
     { text: "MongoDB", link: "mongodb" },
     { text: "PostgreSQL", link: "postgresql" },
     { text: "Python", link: "python" },
@@ -48,21 +48,21 @@ export default function Skills() {
       <div className="xl-w-[80%] mt-[10vh] flex justify-between text-center">
         {skills.map(({ text, set }) => {
           return (
-            <div key={text} className="mx-3 w-[80%] max-w-[400px] md-w-[30%]">
+            <div key={text} className="md-w-[30%] mx-3 w-[80%] max-w-[400px]">
               <h1 className=" dark:text-white">{text}</h1>
               <div className="flex h-[75vh] flex-wrap content-evenly justify-evenly rounded-md bg-slate-200/[0.5] p-3">
                 {set.map(({ text, link }) => {
                   return (
                     <div
                       key={link}
-                      className="align-center mx-2 sm:mx-3 flex h-[100px] flex-col flex-wrap justify-center"
+                      className="align-center mx-2 flex h-[100px] flex-col flex-wrap justify-center sm:mx-3"
                     >
                       <img
-                        className="sm:h-[50px] sm:w-[50px] mx-auto h-[30px] w-[30px]"
+                        className="mx-auto h-[30px] w-[30px] sm:h-[50px] sm:w-[50px]"
                         src={`https://raw.githubusercontent.com/the-code-raccoon/website/816afe171525681bf8d750a425b794358d2ec50d/src/assets/icons/${link}.svg`}
                         alt={text}
                       />
-                      <h1 className="text-sm sm-text-base">{text}</h1>
+                      <h1 className="sm-text-base text-sm">{text}</h1>
                     </div>
                   );
                 })}
