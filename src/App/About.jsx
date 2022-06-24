@@ -9,13 +9,11 @@ export default function About() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:10003/wp-json/wp/v2/posts?slug=about")
+      .get("http://localhost:10003/wp-json/wp/v2/posts?categories=15")
       .then((res) => {
-        console.log(res.data[0].content.rendered);
-
         setTexts({
-          about: res.data[0].content.rendered,
-          lore: "",
+          about: res.data[1].content.rendered,
+          lore: res.data[0].content.rendered,
         });
       });
   }, []);
@@ -25,41 +23,17 @@ export default function About() {
       <div className="mt-[17vh] flex w-[85%] flex-row text-left">
         <div className="mx-3 w-[80vw] sm:w-[100%]">
           <h1>About</h1>
-          <div dangerouslySetInnerHTML={{ __html: texts.about }}></div>
-          <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
-            {texts.about}
-          </h1>
-          {/* <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
-            I'm a full-stack developer based out of Toronto, Ontario. I
-            specialize in front-end development and have a passion for making
-            user-end applications that perform fast and look amazing. When I'm
-            not coding, I am stacking blocks in Tetris, giving myself carpal
-            tunnel through rhythm games, or spending too much time making my
-            Minecraft house look like my dream home.
-          </h1> */}
-          <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
-            Link to my{" "}
-            <a
-              href="https://resume.creddle.io/resume/h7quggpp1wb"
-              target="_blank"
-              rel="noreferrer"
-            >
-              resume!
-            </a>
-          </h1>
+          <h1
+            className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]"
+            dangerouslySetInnerHTML={{ __html: texts.about }}
+          ></h1>
         </div>
         <div className="mx-3 w-[80vw] sm:w-[100%]">
           <h1>Lore</h1>
-          <h1 className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]">
-            The first time I ever picked up the proverbial coding pen I was 11
-            years old at a 'Girls Who Code' workshop happening at my middle
-            school - and the rest was history. After a few years at the
-            University of Toronto's Computer Science program, the area I found I
-            was lacking the most was practical, hands-on skills. I decided to
-            attended a short yet intensive full-stack web development bootcamp
-            at Lighthouse Labs. After such a hands-on experience, I am more sure
-            than ever that coding and web development is where my future lies.
-          </h1>
+          <h1
+            className="mt-3 text-[0.875rem] leading-relaxed sm:text-[1rem]"
+            dangerouslySetInnerHTML={{ __html: texts.lore }}
+          ></h1>
         </div>
       </div>
     </div>
