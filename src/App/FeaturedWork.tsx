@@ -1,17 +1,20 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 export default function FeaturedWork() {
-  const works = [
+  const [works, setWorks] = useState([
     {
       name: "Charcuterie",
       logo: "https://raw.githubusercontent.com/the-code-raccoon/website/ebca3ba315deb25ed16b66ab95e19bb07f4b6ac2/assets/Charcuterie.svg",
       bgcolor: "#ffffff",
       description: `An in-restaurant web platform that gives customers a digital menu
-      and ordering interface at their fingertips, just by scanning a QR
-      code with their phone. Restaurants have a dashboard to manage
-      their menu, seated customers and incoming orders.`,
+          and ordering interface at their fingertips, just by scanning a QR
+          code with their phone. Restaurants have a dashboard to manage
+          their menu, seated customers and incoming orders.`,
       image:
         "https://raw.githubusercontent.com/robotsch/charcuterie/main/docs/orders.png",
       github:
-        "https://raw.githubusercontent.com/robotsch/charcuterie/main/docs/orders.png",
+        "https://github.com/robotsch/charcuterie/",
       preview: null,
       stack: `NodeJS, TypeScript, React, MaterialUI, Express, MongoDB, SocketIO`,
       btntext: "black",
@@ -53,7 +56,73 @@ export default function FeaturedWork() {
       stack: "React, Cypress, StoryBook, Jest",
       btntext: "white",
     },
-  ];
+  ]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:10003/wp-json/wp/v2/posts?categories=1")
+      .then((res) => {
+        console.log(res.data[1])
+        console.log(res.data[1].content.rendered)
+        // const logo = 
+      });
+  }, []);
+
+  // const works = [
+  //   {
+  //     name: "Charcuterie",
+  //     logo: "https://raw.githubusercontent.com/the-code-raccoon/website/ebca3ba315deb25ed16b66ab95e19bb07f4b6ac2/assets/Charcuterie.svg",
+  //     bgcolor: "#ffffff",
+  //     description: `An in-restaurant web platform that gives customers a digital menu
+  //     and ordering interface at their fingertips, just by scanning a QR
+  //     code with their phone. Restaurants have a dashboard to manage
+  //     their menu, seated customers and incoming orders.`,
+  //     image:
+  //       "https://raw.githubusercontent.com/robotsch/charcuterie/main/docs/orders.png",
+  //     github:
+  //       "https://raw.githubusercontent.com/robotsch/charcuterie/main/docs/orders.png",
+  //     preview: null,
+  //     stack: `NodeJS, TypeScript, React, MaterialUI, Express, MongoDB, SocketIO`,
+  //     btntext: "black",
+  //   },
+  //   {
+  //     name: "Foodie",
+  //     logo: "https://raw.githubusercontent.com/the-code-raccoon/website/c0fea90a41bf7b8ad4c447bae694010b830499c7/assets/foodie.svg",
+  //     bgcolor: "#DA4167",
+  //     description: `A restaurant ordering pickup app where users can order from a menu, edit their cart, be notified via SMS of their order and look at their past orders. Restaurant can mange incoming orders via SMS.`,
+  //     image:
+  //       "https://raw.githubusercontent.com/robotsch/Foodie/main/docs/landing-page.png",
+  //     github: "https://github.com/robotsch/Foodie",
+  //     preview: "https://lhl-midterm-foodie.herokuapp.com/",
+  //     stack: "NodeJS, Express, jQuery, Bootstrap, PostgreSQL",
+  //     btntext: "black",
+  //   },
+  //   {
+  //     name: "GOTHREAU",
+  //     logo: "https://raw.githubusercontent.com/the-code-raccoon/website/ebca3ba315deb25ed16b66ab95e19bb07f4b6ac2/assets/GOTHREAU.svg",
+  //     bgcolor: "#674EA7",
+  //     description: "Portfolio website for the musical artist Gothreau.",
+  //     image:
+  //       "https://raw.githubusercontent.com/the-code-raccoon/the-code-raccoon.github.io/main/src/assets/gothreau.png",
+  //     github: "https://github.com/the-code-raccoon/gothreau",
+  //     preview: null,
+  //     stack: "React, TailwindCSS",
+  //     btntext: "white",
+  //   },
+  //   {
+  //     name: "Interview Scheduler",
+  //     logo: "https://raw.githubusercontent.com/the-code-raccoon/scheduler/main/public/images/logo.png",
+  //     bgcolor: "#222f3e",
+  //     description:
+  //       "Interview Scheduler is a single page application that lets users book, edit and cancel interviews.",
+  //     image:
+  //       "https://raw.githubusercontent.com/the-code-raccoon/scheduler/main/docs/landing.png",
+  //     github: "https://github.com/the-code-raccoon/scheduler",
+  //     preview: null,
+  //     stack: "React, Cypress, StoryBook, Jest",
+  //     btntext: "white",
+  //   },
+  // ];
 
   const hidden = (
     <div className="hidden bg-[#222f3e] bg-[#ffffff] bg-[#DA4167] bg-[#674EA7]" />
