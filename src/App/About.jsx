@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 export default function About() {
+  useEffect(() => {
+    fetch("https://example.com/wp-json/wp/v2/posts").then((res) => console.log(res, res.data));
+  }, []);
+
   return (
     <div className="z-10 flex h-[100vh] w-[100%] justify-center text-slate-900 dark:text-white">
       <div className="mt-[17vh] flex w-[85%] flex-row text-left">
